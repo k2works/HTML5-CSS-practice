@@ -104,7 +104,31 @@ $ git push heroku master
 $ heroku domains
 $ heroku destroy demo-web-site
 ```
+#### GitHub Pageのセットアップ
+gulp-gh-pagesのインストールす
+
+```
+$ /vagratn/
+$ npm install --save-dev gulp-gh-pages
+```
+
+gulpタスクの追加
+```
+// Deply GitHub Page
+var ghPages = require('gulp-gh-pages');
+ 
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});
+```
+
+```
+$ gulp deploy
+```
+
 
 ## 参照
 + [現場のプロが本気で教える HTML/CSSデザイン講義](https://www.amazon.co.jp/dp/B01K3SZGR0/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1)
 + [Launching apps with Yeoman](https://medium.com/console-log-yo/launching-apps-with-yeoman-1d0dfa627305#.dbvyvn8mu)
++ [Gulp-gh-pages](http://yeoman.io/learning/deployment.html) 
