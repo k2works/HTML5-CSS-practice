@@ -41,5 +41,8 @@
         "single"
       ]
     }
+  },
+  "dependencies": {
+    "sanitize.css": "^4.1.0"
   }
 }

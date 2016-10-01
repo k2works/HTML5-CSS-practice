@@ -13,7 +13,7 @@ HTML/CSSデザイン講義の内容を実践する
 $ vagrant up
 $ vagrant ssh
 $ cd /vagrant
-$ npm install -g yo generator-webapp gulp
+$ npm install -g yo generator-webapp gulp bower
 ```
 #### アプリケーションのベースをスキャッフォルドで生成する
 ```
@@ -130,5 +130,7 @@ $ gulp deploy
 
 ## 参照
 + [現場のプロが本気で教える HTML/CSSデザイン講義](https://www.amazon.co.jp/dp/B01K3SZGR0/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1)
++ [現場のプロが本気で教える HTML/CSSデザイン講義 サンプルデータ](https://github.com/basara669/html_css_book)
 + [Launching apps with Yeoman](https://medium.com/console-log-yo/launching-apps-with-yeoman-1d0dfa627305#.dbvyvn8mu)
 + [Gulp-gh-pages](http://yeoman.io/learning/deployment.html) 
++ [sanitize.css](https://github.com/jonathantneal/sanitize.css) 
