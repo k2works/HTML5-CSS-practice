@@ -1,3 +1,11 @@
 @import "./base/variables";
 @import "./base/reset";
 @import "./componets/common/header";
+
+//メニュー
+@import "./componets/common/menu";
+
+@import "./componets/entryPanel";
+
+//ボタン
+@import "./componets/parts/buttons";
