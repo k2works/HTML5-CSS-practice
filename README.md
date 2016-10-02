@@ -134,3 +134,5 @@ $ gulp deploy
 + [Launching apps with Yeoman](https://medium.com/console-log-yo/launching-apps-with-yeoman-1d0dfa627305#.dbvyvn8mu)
 + [Gulp-gh-pages](http://yeoman.io/learning/deployment.html) 
 + [sanitize.css](https://github.com/jonathantneal/sanitize.css) 
++ [flipsnap.jp](http://hokaccha.github.io/js-flipsnap/)
++ [Underscore.js](http://underscorejs.org/)
