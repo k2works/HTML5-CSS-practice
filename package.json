@@ -43,6 +43,7 @@
     }
   },
   "dependencies": {
+    "flipsnap": "^0.6.3",
     "sanitize.css": "^4.1.0"
   }
 }
