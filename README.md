@@ -137,3 +137,4 @@ $ gulp deploy
 + [flipsnap.jp](http://hokaccha.github.io/js-flipsnap/)
 + [Underscore.js](http://underscorejs.org/)
 + [Font Awesome](https://github.com/components/font-awesome)
++ [Google Fonts](https://fonts.google.com/)
