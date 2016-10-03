@@ -136,3 +136,4 @@ $ gulp deploy
 + [sanitize.css](https://github.com/jonathantneal/sanitize.css) 
 + [flipsnap.jp](http://hokaccha.github.io/js-flipsnap/)
 + [Underscore.js](http://underscorejs.org/)
++ [Font Awesome](https://github.com/components/font-awesome)
