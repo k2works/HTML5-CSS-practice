@@ -22,12 +22,14 @@
 </head>
 
 <body>
-<div id="wrapper">
+<div id="wrapper" class="SpMenu__wrapper">
+  <div id="overlay" class="SpMenu__overlay"></div>
   <header class="Header l-column">
+    <div id="menu-button" class="Header__button"><span class="fa fa-bars"></span></div>
     <div class="Header__head">
       <h1 class="logo">Site Name</h1>
     </div>
-    <nav class="Header__body">
+    <nav class="Header__body SpMenu">
       <ul class="Menu">
         <li class="Menu__item"><a href="#">Services</a></li>
         <li class="Menu__item"><a href="#">Work</a></li>
@@ -180,30 +182,32 @@
   </div>
 
   <footer class="Footer">
-    <div class="l-wor l-column">
-      <div class="Footer__head"><a href="./">Site Name</a></div>
-      <ul class="Menu Menu--sub">
-        <li><a href="#" class="Menu__item">Services</a></li>
-        <li><a href="#" class="Menu__item">Work</a></li>
-        <li><a href="#" class="Menu__item">About</a></li>
-        <li><a href="#" class="Menu__item">Blog</a></li>
-        <li><a href="#" class="Menu__item">Contact</a></li>
+    <div class="l-row l-column">
+      <div class="Footer__head">
+        <a href="./">Site Name</a>
+        <ul class="Menu Menu--sub">
+          <li><a href="#" class="Menu__item">Services</a></li>
+          <li><a href="#" class="Menu__item">Work</a></li>
+          <li><a href="#" class="Menu__item">About</a></li>
+          <li><a href="#" class="Menu__item">Blog</a></li>
+          <li><a href="#" class="Menu__item">Contact</a></li>
+        </ul>
+      </div>
+      <div class="Footer__body">
+        <p>Copyright information goes down here.</p>
+        <p><a href="#">Legal Notice</a></p>
+        <p><a href="#">Privacy policy</a></p>
+      </div>
+      <ul class="Footer__foot SNS">
+        <li class="SNS__item"><a class="fa fa-facebook-official" href="#"><span class="SNS__text">Facebook</span></a></li>
+        <li class="SNS__item"><a class="fa fa-youtube-square" href="#"><span class="SNS__text">Youtubu</span></a></li>
+        <li class="SNS__item"><a class="fa fa-twitter-square" href="#"><span class="SNS__text">Twitter</span></a></li>
+        <li class="SNS__item"><a class="fa fa-linkedin-square" href="#"><span class="SNS__text">LinkedIn</span></a></li>
+        <li class="SNS__item"><a class="fa fa-flickr" href="#"><span class="SNS__text">Flickr</span></a></li>
+        <li class="SNS__item"><a class="fa fa-instagram" href="#"><span class="SNS__text">Instagram</span></a></li>
+        <li class="SNS__item"><a class="fa fa-yelp" href="#"><span class="SNS__text">Yelp</span></a></li>
       </ul>
     </div>
-    <div class="Footer__body">
-      <p>Copyright information goes down here.</p>
-      <p><a href="#">Legal Notice</a></p>
-      <p><a href="#">Privacy policy</a></p>
-    </div>
-    <ul class="Footer__foot SNS">
-      <li class="SNS__item"><a class="fa fa-facebook-official" href="#"><span class="SNS__text">Facebook</span></a></li>
-      <li class="SNS__item"><a class="fa fa-youtube-square" href="#"><span class="SNS__text">Youtubu</span></a></li>
-      <li class="SNS__item"><a class="fa fa-twitter-square" href="#"><span class="SNS__text">Twitter</span></a></li>
-      <li class="SNS__item"><a class="fa fa-linkedin-square" href="#"><span class="SNS__text">LinkedIn</span></a></li>
-      <li class="SNS__item"><a class="fa fa-flickr" href="#"><span class="SNS__text">Flickr</span></a></li>
-      <li class="SNS__item"><a class="fa fa-instagram" href="#"><span class="SNS__text">Instagram</span></a></li>
-      <li class="SNS__item"><a class="fa fa-yelp" href="#"><span class="SNS__text">Yelp</span></a></li>
-    </ul>
   </footer>
 </div>
 <!-- build:js scripts/vendor/main.min.js -->
