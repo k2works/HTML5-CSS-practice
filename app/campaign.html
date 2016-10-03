@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo Web Site</title>
+
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="/bower_components/sanitize-css/sanitize.css" />
+  <link rel="stylesheet" href="/bower_components/components-font-awesome/css/font-awesome.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+</head>
+
+<body>
+<div id="wrapper" class="SpMenu__wrapper">
+  <div id="overlay" class="SpMenu__overlay"></div>
+  <header class="Header l-column">
+    <div id="menu-button" class="Header__button"><span class="fa fa-bars"></span></div>
+    <div class="Header__head">
+      <h1 class="logo">Site Name</h1>
+    </div>
+    <nav class="Header__body SpMenu">
+      <ul class="Menu">
+        <li class="Menu__item"><a href="#">Services</a></li>
+        <li class="Menu__item"><a href="#">Work</a></li>
+        <li class="Menu__item"><a href="#">About</a></li>
+        <li class="Menu__item"><a href="#">Blog</a></li>
+        <li class="Menu__item"><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="ImageSlide Section">
+    <ul id="Slide" class="ImageSlide__main">
+      <li class="ImageSlide__item js-slide-item">
+        <a href="#"><img src="./images/top/slide1.jpg" alt="about our tea" width="1180" height="490" class="ImageSlide__image"></a>
+      </li>
+      <li class="ImageSlide__item js-slide-item">
+        <a href="#"><img src="./images/top/slide2.jpg" alt="about our coffee" width="1180" height="490" class="ImageSlide__image"></a>
+      </li>
+      <li class="ImageSlide__item js-slide-item">
+        <a href="#"><img src="./images/top/slide3.jpg" alt="about our food" width="1180" height="490" class="ImageSlide__image"></a></li>
+    </ul>
+    <div class="ImageSlide__sub">
+      <span class="ImageSlide__dot js-slide-point">image1</span>
+      <span class="ImageSlide__dot js-slide-point">image2</span>
+      <span class="ImageSlide__dot js-slide-point">image3</span>
+    </div>
+  </div>
+
+  <section class="Section l-column">
+    <div class="Section__head">
+      <h2 class="sectionLabel">CAMPAIGN</h2>
+    </div>
+    <div class="l-row">
+      <section class="EntryPanel EntryPanel--vertical l-tripartitionColumn">
+        <div class="EntryPanel__sub"><img src="./images/campaign/cp_entry1.jpg" alt="フルーツとグラノーラ" class="EntryPanel__thumb">
+        </div>
+        <div class="EntryPanel__main">
+          <h3 class="EntryPanel__head">1日のはじまりに</h3>
+          <div class="EntryPanel__body">
+            大切なあの方にありがとうを届けたい。<br>心も体も温まる素敵なギフト。<br>プレゼントキャンペーン実施中
+          </div>
+          <div class="EntryPanel__foot"><a href="#" class="button">READ MORE</a></div>
+        </div>
+      </section>
+
+      <section class="EntryPanel EntryPanel--vertical l-tripartitionColumn">
+        <div class="EntryPanel__sub"><img src="./images/campaign/cp_entry2.jpg" alt="自家製グラノーラとカフェオレ" class="EntryPanel__thumb">
+        </div>
+        <div class="EntryPanel__main">
+          <h3 class="EntryPanel__head">自家製グラノーラ</h3>
+          <div class="EntryPanel__body">
+            大切なあの方にありがとうを届けたい。<br>心も体も温まる素敵なギフト。<br>プレゼントキャンペーン実施中
+          </div>
+          <div class="EntryPanel__foot"><a href="#" class="button">READ MORE</a></div>
+        </div>
+      </section>
+
+      <section class="EntryPanel EntryPanel--vertical l-tripartitionColumn">
+        <div class="EntryPanel__sub"><img src="./images/campaign/cp_entry3.jpg" alt="自家製レモネード" class="EntryPanel__thumb">
+        </div>
+        <div class="EntryPanel__main">
+          <h3 class="EntryPanel__head">フルーツの恵みであたたまる</h3>
+          <div class="EntryPanel__body">大切なあの方にありがとうを届けたい。<br>心も体も温まる素敵なギフト。<br>プレゼントキャンペーン実施中
+          </div>
+          <div class="EntryPanel__foot"><a href="#" class="button">READ MORE</a></div>
+        </div>
+      </section>
+    </div>
+
+    <div class="Section__item l-column l-row">
+      <div class="l-row">
+        <a class="IconPanel l-tripartitionColumn">
+          <span class="IconPanel__icon fa fa-heart" aria-hidden="true"></span>
+          <h3 class="IconPanel__head">魔法のくちどけ</h3>
+          <p class="IconPanel__body">
+            SPECIAL NUTS CHOCOLATEは最上級のカカオ豆を使用して作っております。<br>製法にあった配合で作り出すSWEETSはまさに絶品。魔法の口溶けをご体験してみてください。
+          </p>
+        </a>
+        <a class="IconPanel l-tripartitionColumn">
+          <span class="IconPanel__icon fa fa-leaf" aria-hidden="true"></span>
+          <h3 class="IconPanel__head">選び抜かれた素材</h3>
+          <p class="IconPanel__body">
+            素材は世界各地から選びぬかれた素材のみを使用しています。じっくり味わって、素材の違いを感じてください。
+          </p>
+        </a>
+        <a class="IconPanel l-tripartitionColumn">
+          <span class="IconPanel__icon fa fa-smile-o" aria-hidden="true"></span>
+          <h3 class="IconPanel__head">プレゼントにも</h3>
+          <p class="IconPanel__body">
+            SPECIAL SWEETSはテイクアウトも可能です。<br>
+            お家でのティータイムや、友達へのプレゼントにもぴったりです。オリジナルマグカップとコーヒー、SPECIAL SWEETSのセットもあります。
+          </p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="Section">
+    <div class="Section__item Campaign__sweets">
+      <div class="Campaign__sweets__main">
+        <h2 class="Campaign__sweets__head">Special Sweets</h2>
+        <div class="Campaign__sweets__body">
+          <p>毎日日替わりでコーヒーに合うスィーツをご用意しています。</p>
+          <p>オープン以来人気No.1のスィーツメニューSPECIAL NUTS CHOCOLATEは<br>パリの老舗で修行を積んだチョコラティエが提案するとっておきチョコレート。</p>
+          <p>香ばしいヘーゼルナッツのかおりに甘酸っぱいクランベリーがコーヒーとベストマッチ！</p>
+          <p>他では味わえない魔法のくちどけをぜひ、おためしください。</p>
+        </div>
+        <a href="#" class="Campaign__sweets__button">OUR SWEETS</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="Section l-column">
+    <div class="Section__head">
+      <h2 class="sectionLabel">More Info</h2>
+    </div>
+    <form action="campaign_submit" method="get" accept-charset="utf-8" class="Form" aria-label="メールマガジン登録フォーム">
+      <input type="text" name="name" placeholder="NAME" size="40" class="Form__input">
+      <input type="text" name="mail" placeholder="MAIL" size="40" class="Form__input">
+      <button type="submit" value="SUBSCRIBE" class="button Form__button">SUBSCRIBE</button>
+    </form>
+
+  </section>
+
+  <footer class="Footer">
+    <div class="l-row l-column">
+      <div class="Footer__head">
+        <a href="./">Site Name</a>
+        <ul class="Menu Menu--sub">
+          <li><a href="#" class="Menu__item">Services</a></li>
+          <li><a href="#" class="Menu__item">Work</a></li>
+          <li><a href="#" class="Menu__item">About</a></li>
+          <li><a href="#" class="Menu__item">Blog</a></li>
+          <li><a href="#" class="Menu__item">Contact</a></li>
+        </ul>
+      </div>
+      <div class="Footer__body">
+        <p>Copyright information goes down here.</p>
+        <p><a href="#">Legal Notice</a></p>
+        <p><a href="#">Privacy policy</a></p>
+      </div>
+      <ul class="Footer__foot SNS">
+        <li class="SNS__item"><a class="fa fa-facebook-official" href="#"><span class="SNS__text">Facebook</span></a></li>
+        <li class="SNS__item"><a class="fa fa-youtube-square" href="#"><span class="SNS__text">Youtubu</span></a></li>
+        <li class="SNS__item"><a class="fa fa-twitter-square" href="#"><span class="SNS__text">Twitter</span></a></li>
+        <li class="SNS__item"><a class="fa fa-linkedin-square" href="#"><span class="SNS__text">LinkedIn</span></a></li>
+        <li class="SNS__item"><a class="fa fa-flickr" href="#"><span class="SNS__text">Flickr</span></a></li>
+        <li class="SNS__item"><a class="fa fa-instagram" href="#"><span class="SNS__text">Instagram</span></a></li>
+        <li class="SNS__item"><a class="fa fa-yelp" href="#"><span class="SNS__text">Yelp</span></a></li>
+      </ul>
+    </div>
+  </footer>
+</div>
+<!-- build:js scripts/vendor/main.min.js -->
+<script src="/bower_components/modernizr/modernizr.js"></script>
+<script src="/bower_components/underscore/underscore.js"></script>
+<script src="/bower_components/flipsnap/flipsnap.js"></script>
+<script src="scripts/main.js"></script>
+<!-- endbuild -->
+<script>
+  imageSlide('Slide', 2);
+</script>
+</body>
+</html>
