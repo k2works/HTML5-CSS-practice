@@ -87,6 +87,7 @@ gulp.task('fonts', () => {
 
 gulp.task('extras', () => {
   return gulp.src([
+    'app/*',
     'app/*.*',
     '!app/*.html'
   ], {
@@ -173,8 +174,16 @@ gulp.task('deploy', function() {
     .pipe(ghPages());
 });
 
+// Install npm module
+var install = require("gulp-install");
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('install', function() {
+  gulp.src(['./app/bower.json', './app/package.json'])
+    .pipe(gulp.dest('./dist'))
+    .pipe(install());
+});
+
+gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras', 'install'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 

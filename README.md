@@ -26,7 +26,7 @@ $ gulp serve
 ### アプリケーションデプロイセットアップ
 #### Herukuのセットアップ
 ```
-$ cd dist && npm init
+$ cd app && npm init
 This utility will walk you through creating a package.json file.
 It only covers the most common items, and tries to guess sensible defaults.
 
@@ -82,6 +82,26 @@ app.use(gzippo.staticGzip('' + __dirname));
 var server = http.createServer(app);
 server.listen(process.env.PORT || 5000);
 ```
+gulp-install追加
+```
+npm install --save gulp-install
+```
+
+gulpタスクの追加
+```
+// Install npm module
+var install = require("gulp-install");
+
+gulp.task('install', function() {
+  gulp.src(['./app/bower.json', './app/package.json'])
+    .pipe(gulp.dest('./dist'))
+    .pipe(install());
+});
+
+gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras', 'install'], () => {
+  return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
+});
+```
 
 Procfile
 
@@ -92,10 +112,12 @@ web: node web.js
 Git
 
 ```
+$ cd dist
 $ git init
 $ git add -A
 $ git commit -m 'Initial Commit'
 ```
+
 Heroku
 
 ```
