@@ -1,9 +1,16 @@
+@charset 'utf-8';
+
+// =====================
+// トップページ固有のスタイル
+// =====================
+
 .IndexPage {
   &__foodMenu,
   &__drinkMenu {
-    background-repeat: no-repeat;
+    display: flex;
     background-position: center center;
     background-size: cover;
+    background-repeat: no-repeat;
   }
   &__drinkMenu {
     background-image: url('#{$image-path}top/menu_drink.jpg');

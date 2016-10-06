@@ -1,3 +1,5 @@
+@charset 'utf-8';
+
 .Menu {
   display: flex;
   justify-content: space-around;
@@ -10,10 +12,12 @@
     padding: 10px 15px;
     text-transform: uppercase;
   }
+  // フッターのメニュー
   &--sub {
     flex-direction: column;
   }
 }
+
 
 .SpMenu {
   @include mq-sp {
@@ -29,6 +33,7 @@
       transition: opacity 0s 0s ease;
     }
   }
+  // 本文のラッパー
   &__wrapper {
     left: 0;
     width: 100%;
@@ -36,9 +41,11 @@
     &.isOpened {
       position: fixed;
       left: $sp-menu-width;
-      box-shadow: 0 1px 10px rgba(black, 0.3);
+      z-index: 1;
+      box-shadow: 0 1px 10px rgba(black, .3);
     }
   }
+  // メニュー以外の部分をタップでメニュー開閉するためのオーバーレイ
   &__overlay {
     position: relative;
     display: none;

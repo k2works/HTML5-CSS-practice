@@ -3,12 +3,11 @@
 // ===========================
 // Base
 // ===========================
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300);
 
 @import "./base/variables";
 @import "./base/mixins";
 @import "./base/reset";
-
 
 // ===========================
 // Components
@@ -67,12 +66,14 @@
 // Pages
 // ===========================
 @import "./pages/index";
+
 @import "./pages/campaign";
+
 @import "./pages/article";
 
 // ===========================
 // Utils
 // ===========================
-//サイズ、余白などの便利class
+// サイズ、余白などの便利class
 @import "./utils/arrangements";
 
