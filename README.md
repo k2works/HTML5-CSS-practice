@@ -139,16 +139,96 @@ gulpタスクの追加
 // Deply GitHub Page
 var ghPages = require('gulp-gh-pages');
  
-gulp.task('deploy', function() {
+gulp.task('deploy_github', function() {
   return gulp.src('./dist/**/*')
     .pipe(ghPages());
 });
 ```
 
 ```
-$ gulp deploy
+$ gulp deploy_github
 ```
 
+#### AWSのセットアップ
+開発用仮想マシンにログイン
+```
+$ vagrant up
+$ vagrant ssh
+$ cd /vagrant
+```
+
+gulpタスクの追加
+```
+$ npm install --save-dev gulp-s3
+```
+_gulpfile.js_
+
+```
+// Deploy AWS S3
+var fs = require('fs');
+var s3 = require("gulp-s3");
+
+gulp.task('deploy_aws', function() {
+  aws = JSON.parse(fs.readFileSync('./aws.json'));
+  gulp.src('./dist/**')
+    .pipe(s3(aws));
+});
+```
+
+S3バケットデプロイ用ユーザーを作成して以下のポリシーを適用する
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::demo.hiroshima-arc.org",
+                "arn:aws:s3:::demo.hiroshima-arc.org/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": "s3:ListAllMyBuckets",
+            "Resource": "*"
+        }
+    ]
+}
+```
+
+aws.jsonにクレデンシャルを設定してバケットを作成する
+```
+$ aws s3 mb s3://demo.hiroshima-arc.org
+```
+
+[バケットの設定をする](https://docs.aws.amazon.com/ja_jp/gettingstarted/latest/swh/getting-started-configure-bucket.html)
+
+以下のバケットポリシーを適用する
+```
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "Allow Public Access to All Objects",
+			"Effect": "Allow",
+			"Principal": "*",
+			"Action": "s3:GetObject",
+			"Resource": "arn:aws:s3:::demo.hiroshima-arc.org/*"
+		}
+	]
+}
+```
+
+デプロイを実行する
+
+```
+$ gulp deploy_aws
+```
+
+Route53で以下のドメインを設定したらアクセスできるか確認する
+
+http://demo.hiroshima-arc.org
 
 ## 参照
 + [現場のプロが本気で教える HTML/CSSデザイン講義](https://www.amazon.co.jp/dp/B01K3SZGR0/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1)
@@ -160,3 +240,4 @@ $ gulp deploy
 + [Underscore.js](http://underscorejs.org/)
 + [Font Awesome](https://github.com/components/font-awesome)
 + [Google Fonts](https://fonts.google.com/)
++ [アマゾン ウェブ サービスで静的ウェブサイトをホストする](https://docs.aws.amazon.com/ja_jp/gettingstarted/latest/swh/website-hosting-intro.html)

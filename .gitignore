@@ -96,3 +96,5 @@ jspm_packages
 .tmp
 
 .publish
+
+aws.json

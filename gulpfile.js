@@ -166,12 +166,22 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-// Deply GitHub Page
+// Deploy GitHub Page
 var ghPages = require('gulp-gh-pages');
 
-gulp.task('deploy', function() {
+gulp.task('deploy_github', function() {
   return gulp.src('./dist/**/*')
     .pipe(ghPages());
+});
+
+// Deploy AWS S3
+var fs = require('fs');
+var s3 = require("gulp-s3");
+
+gulp.task('deploy_aws', function() {
+  aws = JSON.parse(fs.readFileSync('./aws.json'));
+  gulp.src('./dist/**')
+    .pipe(s3(aws));
 });
 
 // Install npm module
